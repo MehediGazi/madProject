@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@drawable/bg1">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/app_name"
+        android:gravity="center"
+        android:text="VocaPuzz"
+        android:textSize="40dp"
+        android:layout_margin="10dp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:id="@+id/signup_txt"
+        android:layout_below="@id/app_name"
+        android:text="Sign Up"
+        android:textSize="30dp"
+        android:layout_margin="10dp"
+        android:textColor="@color/white" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/phone_no"
+        android:layout_below="@id/signup_txt"
+        android:hint="Enter Phone Number"
+        android:padding="20dp"
+        android:background="@color/white"
+        android:textSize="20dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:drawableLeft="@drawable/phone_no"
+        android:drawablePadding="7dp"
+        />
+
+    <EditText
+        android:id="@+id/pass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/phone_no"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginRight="30dp"
+        android:background="@color/white"
+        android:drawableLeft="@drawable/ic_baseline_stars_24"
+        android:drawablePadding="7dp"
+        android:hint="Enter Password"
+        android:padding="20dp"
+        android:textSize="20dp" />
+
+    <Button
+        android:id="@+id/login_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/pass"
+        android:layout_marginLeft="100dp"
+        android:text="Login"
+        android:textColor="@color/white"
+        android:backgroundTint="#ebb134"
+        android:layout_marginTop="10dp"
+
+        />
+
+    <Button
+        android:id="@+id/signup_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/pass"
+        android:layout_toRightOf="@id/login_btn"
+        android:backgroundTint="#eb5f34"
+        android:text="Signup"
+        android:layout_marginLeft="20dp"
+        android:textColor="@color/white"
+        android:layout_marginTop="10dp"
+
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Forgot Password"
+        android:textSize="15dp"
+        android:layout_below="@id/login_btn"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:textColor="#ffd6dc"
+        />
+</RelativeLayout>
