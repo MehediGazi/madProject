@@ -35,20 +35,31 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/phone_no"
+        android:id="@+id/name"
         android:layout_below="@id/signup_txt"
-        android:hint="Enter Phone Number"
-        android:padding="20dp"
+        android:hint="Name"
+        android:padding="10dp"
         android:background="@color/white"
         android:textSize="20dp"
         android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp"
-        android:drawableLeft="@drawable/phone_no"
-        android:drawablePadding="7dp"
         />
 
     <EditText
-        android:id="@+id/pass"
+        android:id="@+id/phone_no"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/name"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginRight="30dp"
+        android:background="@color/white"
+        android:hint="Phone Number"
+        android:padding="10dp"
+        android:textSize="20dp" />
+
+    <EditText
+        android:id="@+id/dob"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/phone_no"
@@ -56,47 +67,72 @@
         android:layout_marginTop="7dp"
         android:layout_marginRight="30dp"
         android:background="@color/white"
-        android:drawableLeft="@drawable/ic_baseline_stars_24"
-        android:drawablePadding="7dp"
-        android:hint="Enter Password"
-        android:padding="20dp"
+        android:hint="Date of Birth"
+        android:padding="10dp"
         android:textSize="20dp" />
 
-    <Button
-        android:id="@+id/login_btn"
+    <EditText
+        android:id="@+id/pass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/dob"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginRight="30dp"
+        android:background="@color/white"
+        android:hint="Password"
+        android:padding="10dp"
+        android:textSize="20dp" />
+
+    <RadioGroup
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/gen"
         android:layout_below="@id/pass"
-        android:layout_marginLeft="100dp"
-        android:text="Login"
+        android:orientation="horizontal"
+        >
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Male"
+            android:id="@+id/male"
+            />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Female"
+            android:id="@+id/female"
+            />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/signup_btn2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/gen"
+        android:layout_centerHorizontal="true"
+        android:text="Sign Up"
         android:textColor="@color/white"
         android:backgroundTint="#ebb134"
         android:layout_marginTop="10dp"
+        android:textSize="20dp"
 
         />
 
     <Button
-        android:id="@+id/signup_btn"
+        android:id="@+id/login_btn2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/pass"
-        android:layout_toRightOf="@id/login_btn"
+        android:layout_below="@id/signup_btn2"
+        android:layout_centerHorizontal="true"
         android:backgroundTint="#eb5f34"
-        android:text="Signup"
+        android:text="Login"
         android:layout_marginLeft="20dp"
         android:textColor="@color/white"
         android:layout_marginTop="10dp"
 
-        />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Forgot Password"
-        android:textSize="15dp"
-        android:layout_below="@id/login_btn"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="10dp"
-        android:textColor="#ffd6dc"
         />
 </RelativeLayout>
