@@ -7,6 +7,7 @@
         <entry key="app/src/main/res/drawable/ic_baseline_stars_24.xml" value="0.1245" />
         <entry key="app/src/main/res/drawable/quiz_icon.xml" value="0.189" />
         <entry key="app/src/main/res/layout/activity_home_page.xml" value="0.2712977091471354" />
+        <entry key="app/src/main/res/layout/activity_learn_vocab.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.28229166666666666" />
         <entry key="app/src/main/res/layout/activity_main2.xml" value="0.13697916666666668" />
         <entry key="app/src/main/res/layout/activity_q1.xml" value="0.28229166666666666" />
@@ -15,6 +16,7 @@
         <entry key="app/src/main/res/layout/fragment_notification.xml" value="0.28229166666666666" />
         <entry key="app/src/main/res/layout/fragment_quiz.xml" value="0.165" />
         <entry key="app/src/main/res/layout/fragment_settings.xml" value="0.28229166666666666" />
+        <entry key="app/src/main/res/layout/rows.xml" value="0.10098522167487685" />
         <entry key="app/src/main/res/menu/bot_nav_manu.xml" value="0.28229166666666666" />
       </map>
     </option>

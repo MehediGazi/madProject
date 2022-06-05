@@ -2,4 +2,26 @@
     <string name="app_name">madProject</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string-array name="words">
+        <item>Hello</item>
+        <item>Table</item>
+        <item>Chair</item>
+        <item>Book</item>
+        <item>Hello</item>
+        <item>Table</item>
+        <item>Chair</item>
+        <item>Book</item>
+    </string-array>
+
+    <string-array name="def">
+        <item>Used as a greeting or to begin a phone conversation.</item>
+        <item>A piece of furniture with a flat top and one or more legs, providing a level surface for eating, writing, or working at.</item>
+        <item>A separate seat for one person, typically with a back and four legs.</item>
+        <item>A written or printed work consisting of pages glued or sewn together along one side and bound in covers.</item>
+        <item>Used as a greeting or to begin a phone conversation.</item>
+        <item>A piece of furniture with a flat top and one or more legs, providing a level surface for eating, writing, or working at.</item>
+        <item>A separate seat for one person, typically with a back and four legs.</item>
+        <item>A written or printed work consisting of pages glued or sewn together along one side and bound in covers.</item>
+    </string-array>
 </resources>
