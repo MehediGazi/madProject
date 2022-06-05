@@ -1,9 +1,15 @@
 package com.example.madproject;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.NotificationCompat;
+import androidx.core.app.NotificationManagerCompat;
 
+import android.app.Notification;
+import android.app.NotificationChannel;
+import android.app.NotificationManager;
 import android.content.Intent;
 import android.database.Cursor;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -21,6 +27,12 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.O){
+            NotificationChannel channel = new NotificationChannel("Login Notify", "Login Notify",  NotificationManager.IMPORTANCE_DEFAULT);
+            NotificationManager manager =  getSystemService(NotificationManager.class);
+            manager.createNotificationChannel(channel);
+        }
 
         signupBtn = findViewById(R.id.signup_btn);
         loginBtn = findViewById(R.id.login_btn);
@@ -58,6 +70,16 @@ public class MainActivity extends AppCompatActivity {
                 }
 
                 if(passTxt.equals(passDb)){
+
+                    NotificationCompat.Builder builder = new NotificationCompat.Builder(MainActivity.this, "Login Notify");
+                    builder.setContentTitle("Login Notification");
+                    builder.setContentText("You Have Been Logged In Successfully");
+                    builder.setSmallIcon(R.drawable.icon);
+                    builder.setAutoCancel(true);
+
+                    NotificationManagerCompat managerCompat = NotificationManagerCompat.from(MainActivity.this);
+                    managerCompat.notify(1, builder.build());
+
                     openHomepage();
                 }else{
                     Toast.makeText(MainActivity.this, "Wrong Password, Try Again", Toast.LENGTH_SHORT).show();

@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeFragment"
+    android:orientation="horizontal">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Quiz-01"
+        android:layout_centerHorizontal="true"
+        android:padding="20dp"
+        android:textSize="30dp"
+        android:id="@+id/welcome"
+        android:textStyle="bold"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/correct"
+        android:textColor="#79e300"
+        android:layout_below="@id/welcome"
+        android:textSize="20dp"
+        android:text="Your Answer is Correct!"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/incorrect"
+        android:textColor="#e30035"
+        android:layout_below="@id/correct"
+        android:textSize="20dp"
+        android:layout_margin="20dp"
+        android:layout_marginTop="20dp"
+        android:text="Your Answer is Incorrect!"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/corrans"
+        android:textColor="@color/black"
+        android:layout_below="@id/incorrect"
+        android:textSize="20dp"
+        android:text="Correct Answer"
+        android:layout_margin="20dp"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ques"
+        android:textColor="@color/black"
+        android:layout_below="@id/corrans"
+        android:layout_margin="40dp"
+        android:textSize="25dp"
+        android:text=""
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical"
+        android:id="@+id/opts"
+        android:layout_below="@id/ques">
+
+
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:backgroundTint="@color/black"
+            android:text="Option"
+            android:id="@+id/opt1" >
+
+
+        </Button>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:backgroundTint="@color/black"
+            android:text="Option"
+            android:id="@+id/opt2" >
+
+        </Button>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:backgroundTint="@color/black"
+            android:text="Option"
+            android:id="@+id/opt3" >
+
+        </Button>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:backgroundTint="@color/black"
+            android:text="Option"
+            android:id="@+id/opt4" >
+
+        </Button>
+
+
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/next"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="30dp"
+        android:padding="20dp"
+        android:backgroundTint="#fcba03"
+        android:textSize="20dp"
+        android:text="Next"
+        android:layout_below="@id/opts"/>
+
+    <Button
+        android:id="@+id/confirm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="30dp"
+        android:padding="20dp"
+        android:backgroundTint="#fc5603"
+        android:textSize="20dp"
+        android:text="Confirm"
+        android:textStyle="bold"
+        android:layout_below="@id/next"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/confirm"
+        android:id="@+id/exit"
+        android:text="Exit"
+        android:textSize="20dp"
+        android:layout_centerHorizontal="true"
+        android:padding="10dp"
+        android:layout_marginTop="30dp"/>
+</RelativeLayout>
