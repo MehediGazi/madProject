@@ -3,13 +3,20 @@ package com.example.madproject;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.database.Cursor;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
-public class q1Activity extends AppCompatActivity implements View.OnClickListener{
+import java.util.ArrayList;
+
+
+
+
+public class qtestActivity extends AppCompatActivity implements View.OnClickListener{
 
     //TextView quesNo;
     TextView questions, correct, incorrect, corrans;
@@ -21,6 +28,7 @@ public class q1Activity extends AppCompatActivity implements View.OnClickListene
     int currQues = 0;
     int tmp_total_ques = 0;
     String sel = "";
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,8 +57,57 @@ public class q1Activity extends AppCompatActivity implements View.OnClickListene
         confirm.setOnClickListener(this);
         next.setOnClickListener(this);
 
+        ques quecal = new ques();
+
+        DBHelperQuiz DBQ2;
+        DBQ2 = new DBHelperQuiz(this);
+        String ques1, opt1, opt2, opt3, opt4, ans;
+
+        Cursor res = DBQ2.getdata(1);
+
+        if (res.getCount() == 0) {
+            Toast.makeText(qtestActivity.this, "Wrong Input", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        ArrayList<String> ques3 = new ArrayList<String>();
+        ArrayList<String> opt13 = new ArrayList<String>();
+        ArrayList<String> opt23 = new ArrayList<String>();
+        ArrayList<String> opt33 = new ArrayList<String>();
+        ArrayList<String> opt43 = new ArrayList<String>();
+        ArrayList<String> ans3 = new ArrayList<String>();
+
+        while(res.moveToNext()){
+            ques1 = res.getString(1);
+            opt1 = res.getString(2);
+            opt2 = res.getString(3);
+            opt3 = res.getString(4);
+            opt4 = res.getString(5);
+            ans = res.getString(6);
+
+//            ques3.add(ques1);
+//            opt13.add(opt1);
+//            opt23.add(opt2);
+//            opt33.add(opt3);
+//            opt43.add(opt4);
+//            ans3.add(ans);
+
+            //quecal.getvals(ques1, opt1, opt2, opt3, opt4, ans);
+
+        }
+
+//        ques3 = quecal.ques3;
+//        opt13 = quecal.opt13;
+//        opt23 = quecal.opt23;
+//        opt33 = quecal.opt33;
+//        opt43 = quecal.opt43;
+//        ans3 = quecal.ans3;
+
+        //public static String[] ques4 = new String[ques3.size()];
+
+
         //quesNo.setText("Number of Question: " + totalQues);
-        newQuestion();
+        newQuestion(ques3, opt13, opt23, opt33, opt43, ans3);
 
 
 
@@ -80,7 +137,7 @@ public class q1Activity extends AppCompatActivity implements View.OnClickListene
             if (sel.equals(ques.correct[currQues])) {
                 result++;
             }
-            answerPage();
+            //answerPage();
 
         } else if(clickedButton.getId() == R.id.confirm) {
             if (sel.equals(ques.correct[currQues])) {
@@ -98,25 +155,25 @@ public class q1Activity extends AppCompatActivity implements View.OnClickListene
     }
 
 
-    void answerPage(){
+    void answerPage(ArrayList<String> ques3, ArrayList<String> opt13, ArrayList<String> opt23, ArrayList<String> opt33, ArrayList<String> opt43, ArrayList<String> ans3){
         opt1.setVisibility(View.GONE);
         opt2.setVisibility(View.GONE);
         opt3.setVisibility(View.GONE);
         opt4.setVisibility(View.GONE);
         next.setVisibility(View.VISIBLE);
-        confirm.setVisibility(View.GONE);
+        confirm.setVisibility(View.INVISIBLE);
+        questions.setVisibility(View.INVISIBLE);
 
         next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 currQues++;
-                newQuestion();
+                newQuestion(ques3, opt13, opt23, opt33, opt43, ans3);
             }
         });
 
         if (sel.equals(ques.correct[currQues])) {
             correct.setVisibility(View.VISIBLE);
-            questions.setVisibility(View.INVISIBLE);
         }else{
             incorrect.setVisibility(View.VISIBLE);
             corrans.setVisibility(View.VISIBLE);
@@ -130,7 +187,7 @@ public class q1Activity extends AppCompatActivity implements View.OnClickListene
     }
 
 
-    void newQuestion ()
+    void newQuestion (ArrayList<String> ques3, ArrayList<String> opt13, ArrayList<String> opt23, ArrayList<String> opt33, ArrayList<String> opt43, ArrayList<String> ans3)
     {
         opt1.setVisibility(View.VISIBLE);
         opt2.setVisibility(View.VISIBLE);
@@ -151,11 +208,12 @@ public class q1Activity extends AppCompatActivity implements View.OnClickListene
         correct.setVisibility(View.GONE);
         incorrect.setVisibility(View.GONE);
 
-        questions.setText(ques.questions[currQues]);
-        opt1.setText(ques.options[currQues][0]);
-        opt2.setText(ques.options[currQues][1]);
-        opt3.setText(ques.options[currQues][2]);
-        opt4.setText(ques.options[currQues][3]);
+        questions.setText(ques3.get(currQues));
+        opt1.setText(opt13.get(currQues));
+        opt1.setText(opt23.get(currQues));
+        opt1.setText(opt33.get(currQues));
+        opt1.setText(opt43.get(currQues));
+        opt1.setText(ans3.get(currQues));
 
     }
 
@@ -180,4 +238,6 @@ public class q1Activity extends AppCompatActivity implements View.OnClickListene
         Intent intent2 = new Intent(this, HomePage.class);
         startActivity(intent2);
     }
+
+
 }

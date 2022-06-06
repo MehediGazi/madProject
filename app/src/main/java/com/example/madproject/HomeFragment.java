@@ -27,9 +27,23 @@ public class HomeFragment extends Fragment {
         ques1 = view.findViewById(R.id.q1);
         q2 = view.findViewById(R.id.q2);
         q3 = view.findViewById(R.id.q3);
-        q4 = view.findViewById(R.id.q4);
+        //q4 = view.findViewById(R.id.q4);
 
         ques1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                q1Page();
+            }
+        });
+
+        q2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                q2Page();
+            }
+        });
+
+        q3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 q1Page();
@@ -42,6 +56,11 @@ public class HomeFragment extends Fragment {
 
     public void q1Page(){
         Intent intent3 = new Intent(getActivity(), q1Activity.class);
+        startActivity(intent3);
+    }
+
+    public void q2Page(){
+        Intent intent3 = new Intent(getActivity(), q2Activity.class);
         startActivity(intent3);
     }
 }

@@ -1,20 +1,24 @@
 package com.example.madproject;
 
+import java.util.ArrayList;
+
 public class ques {
 
     public static String questions[] = {
-            "Where is UIU situated?", "Which Facility UIU doesn't have?", "Which department UIU doesn't have?"
+            "What word is the opposite of ‘counterfeit’?", "What is the antonym of the word ‘intrepid’?", "Choose the word which means the opposite of ‘quench’.",
+            "Pick the option which is the antonym for ‘vicious’."
     };
 
     public static String options[][] = {
-            {"Dhanmondi", "Sylhet", "Mohammadpur", "Near Gulshan"},
-            {"Playground", "Air Conditioned Canteen", "Library", "Indoor Games"},
-            {"Medical", "CSE", "Law", "BBA"}
+            {"Fraudulent", "Cheat", "Deceit", "Genuine"},
+            {"Cowardly", "Courageous", "Fearful", "Timid"},
+            {"Parch", "Douse", "Extinguish", "Smother   "},
+            {"Passive", "Savage", "Merciless", "Cordial"}
+
     };
 
     public static String correct[] = {
-            "Near Gulshan", "Air Conditioned Canteen", "Law"
+            "Genuine", "Courageous", "Parch", "Cordial"
     };
-
 
 }

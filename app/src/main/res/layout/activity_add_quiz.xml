@@ -7,131 +7,139 @@
     tools:context=".MainActivity"
     android:background="@drawable/bg1">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/app_name"
-        android:gravity="center"
-        android:text="VocaPuzz"
-        android:textSize="40dp"
-        android:layout_margin="10dp"
-        android:textStyle="bold"
-        android:textColor="@color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="50dp"
-        android:id="@+id/signup_txt"
-        android:layout_below="@id/app_name"
-        android:text="Sign Up"
-        android:textSize="30dp"
-        android:layout_margin="10dp"
+        android:id="@+id/addquiz_txt"
+        android:text="Add questions to the quiz"
+        android:textSize="25dp"
+        android:layout_margin="30dp"
         android:textColor="@color/white"
         android:layout_centerHorizontal="true"/>
 
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/name"
-        android:layout_below="@id/signup_txt"
-        android:hint="Name"
-        android:padding="10dp"
-        android:background="@color/white"
+        android:id="@+id/quesadd"
+        android:layout_below="@id/addquiz_txt"
+        android:hint="Enter Question"
+        android:background="#ccffdd"
         android:textSize="20dp"
         android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp"
+        android:layout_marginBottom="30dp"
+        android:paddingTop="7dp"
+        android:paddingBottom="70dp"
         />
 
     <EditText
-        android:id="@+id/phone_no"
+        android:id="@+id/opt1add"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/name"
+        android:layout_below="@+id/quesadd"
         android:layout_marginLeft="30dp"
         android:layout_marginTop="7dp"
         android:layout_marginRight="30dp"
         android:background="@color/white"
-        android:hint="Phone Number"
+        android:hint="Option 1"
         android:padding="10dp"
         android:textSize="20dp" />
 
     <EditText
-        android:id="@+id/dob"
+        android:id="@+id/opt2add"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/phone_no"
+        android:layout_below="@+id/opt1add"
         android:layout_marginLeft="30dp"
         android:layout_marginTop="7dp"
         android:layout_marginRight="30dp"
         android:background="@color/white"
-        android:hint="Date of Birth"
+        android:hint="Option 2"
         android:padding="10dp"
         android:textSize="20dp" />
 
     <EditText
-        android:id="@+id/pass"
+        android:id="@+id/opt3add"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/dob"
+        android:layout_below="@+id/opt2add"
         android:layout_marginLeft="30dp"
         android:layout_marginTop="7dp"
         android:layout_marginRight="30dp"
         android:background="@color/white"
-        android:hint="Password"
+        android:hint="Option 3"
+        android:padding="10dp"
+        android:textSize="20dp" />
+
+    <EditText
+        android:id="@+id/opt4add"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/opt3add"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginRight="30dp"
+        android:background="@color/white"
+        android:hint="Option 4"
         android:padding="10dp"
         android:textSize="20dp"
-        android:inputType="textPassword"/>
+        android:layout_marginBottom="20dp"/>
 
-    <!--<RadioGroup
-        android:layout_width="wrap_content"
+    <EditText
+        android:id="@+id/corransadd"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/opt4add"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginRight="30dp"
+        android:background="#ffccf1"
+        android:hint="Correct Answer"
+        android:padding="10dp"
+        android:textSize="20dp" />
+
+    <EditText
+        android:id="@+id/quizno"
+        android:layout_width="wrap_content"
         android:layout_centerHorizontal="true"
-        android:id="@+id/gen"
-        android:layout_below="@id/pass"
-        android:orientation="horizontal"
-        >
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/corransadd"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginRight="30dp"
+        android:background="#ffcc61"
+        android:hint="Quiz Number (1/2/3/4)"
+        android:padding="10dp"
+        android:textSize="20dp"
+        android:inputType="number"/>
 
-        <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Male"
-            android:id="@+id/male"
-            />
-
-        <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Female"
-            android:id="@+id/female"
-            />
-    </RadioGroup>-->
 
     <Button
-        android:id="@+id/signup_btn2"
+        android:id="@+id/addquiz_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/pass"
+        android:layout_below="@id/quizno"
         android:layout_centerHorizontal="true"
-        android:text="Sign Up"
+        android:text="Add Question"
+        android:paddingBottom="20dp"
+        android:paddingTop="20dp"
         android:textColor="@color/white"
-        android:backgroundTint="#ebb134"
+        android:backgroundTint="#7154ff"
         android:layout_marginTop="10dp"
         android:textSize="20dp"
 
         />
 
     <Button
-        android:id="@+id/login_btn2"
+        android:id="@+id/exit_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/signup_btn2"
+        android:layout_below="@id/addquiz_btn"
         android:layout_centerHorizontal="true"
         android:backgroundTint="#eb5f34"
-        android:text="Login"
+        android:text="exit"
         android:layout_marginLeft="20dp"
         android:textColor="@color/white"
         android:layout_marginTop="10dp"

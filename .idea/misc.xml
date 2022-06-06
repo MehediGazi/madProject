@@ -3,16 +3,21 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="app/src/main/res/drawable/border.xml" value="0.147" />
         <entry key="app/src/main/res/drawable/home_icon.xml" value="0.189" />
         <entry key="app/src/main/res/drawable/ic_baseline_stars_24.xml" value="0.1245" />
         <entry key="app/src/main/res/drawable/quiz_icon.xml" value="0.189" />
+        <entry key="app/src/main/res/drawable/settings_icon.xml" value="0.126" />
+        <entry key="app/src/main/res/layout/activity_add_quiz.xml" value="0.20364583333333333" />
         <entry key="app/src/main/res/layout/activity_home_page.xml" value="0.2712977091471354" />
-        <entry key="app/src/main/res/layout/activity_learn_vocab.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_learn_vocab.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.28229166666666666" />
         <entry key="app/src/main/res/layout/activity_main2.xml" value="0.13697916666666668" />
-        <entry key="app/src/main/res/layout/activity_q1.xml" value="0.28229166666666666" />
+        <entry key="app/src/main/res/layout/activity_q1.xml" value="0.21311475409836064" />
+        <entry key="app/src/main/res/layout/activity_q2.xml" value="0.28229166666666666" />
+        <entry key="app/src/main/res/layout/activity_qtest.xml" value="0.2682291666666667" />
         <entry key="app/src/main/res/layout/activity_sign_up.xml" value="0.28229166666666666" />
-        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.28229166666666666" />
+        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_notification.xml" value="0.28229166666666666" />
         <entry key="app/src/main/res/layout/fragment_quiz.xml" value="0.165" />
         <entry key="app/src/main/res/layout/fragment_settings.xml" value="0.28229166666666666" />

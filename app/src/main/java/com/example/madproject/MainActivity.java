@@ -60,8 +60,6 @@ public class MainActivity extends AppCompatActivity {
 
                 if (res.getCount() == 0) {
                     Toast.makeText(MainActivity.this, "Wrong Input", Toast.LENGTH_SHORT).show();
-                    phone.setText("");
-                    pass1.setText("");
                     return;
                 }
                 while(res.moveToNext()){

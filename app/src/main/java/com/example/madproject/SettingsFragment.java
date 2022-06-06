@@ -18,8 +18,10 @@ public class SettingsFragment extends Fragment {
         // Inflate the layout for this fragment
         View view =  inflater.inflate(R.layout.fragment_settings, container, false);
 
-        Button vocab;
+        Button vocab,  addquiz, logout;
         vocab = view.findViewById(R.id.vocab);
+        addquiz = view.findViewById(R.id.addquiz);
+        logout = view.findViewById(R.id.logout);
 
         vocab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -28,11 +30,35 @@ public class SettingsFragment extends Fragment {
             }
         });
 
+        addquiz.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openAddQuiz();
+            }
+        });
+
+        logout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Logout();
+            }
+        });
+
         return view;
     }
 
     public void openVocab(){
         Intent intent2 = new Intent(getActivity(), LearnVocab.class);
+        startActivity(intent2);
+    }
+
+    public void openAddQuiz(){
+        Intent intent2 = new Intent(getActivity(), AddQuiz.class);
+        startActivity(intent2);
+    }
+
+    public void Logout(){
+        Intent intent2 = new Intent(getActivity(), MainActivity.class);
         startActivity(intent2);
     }
 }

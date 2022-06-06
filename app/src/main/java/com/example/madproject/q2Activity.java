@@ -9,7 +9,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-public class q1Activity extends AppCompatActivity implements View.OnClickListener{
+public class q2Activity extends AppCompatActivity implements View.OnClickListener{
 
     //TextView quesNo;
     TextView questions, correct, incorrect, corrans;
@@ -17,7 +17,7 @@ public class q1Activity extends AppCompatActivity implements View.OnClickListene
     Button confirm, next;
 
     int result = 0;
-    int totalQues = ques.questions.length;
+    int totalQues = ques2.questions.length;
     int currQues = 0;
     int tmp_total_ques = 0;
     String sel = "";
@@ -77,13 +77,13 @@ public class q1Activity extends AppCompatActivity implements View.OnClickListene
 
         Button clickedButton = (Button) view;
         if (clickedButton.getId() == R.id.confirm) {
-            if (sel.equals(ques.correct[currQues])) {
+            if (sel.equals(ques2.correct[currQues])) {
                 result++;
             }
             answerPage();
 
         } else if(clickedButton.getId() == R.id.confirm) {
-            if (sel.equals(ques.correct[currQues])) {
+            if (sel.equals(ques2.correct[currQues])) {
                 clickedButton.setBackgroundColor(Color.RED);
             }else{
                 clickedButton.setBackgroundColor(Color.GREEN);
@@ -114,13 +114,13 @@ public class q1Activity extends AppCompatActivity implements View.OnClickListene
             }
         });
 
-        if (sel.equals(ques.correct[currQues])) {
+        if (sel.equals(ques2.correct[currQues])) {
             correct.setVisibility(View.VISIBLE);
             questions.setVisibility(View.INVISIBLE);
         }else{
             incorrect.setVisibility(View.VISIBLE);
             corrans.setVisibility(View.VISIBLE);
-            corrans.setText("Correct Answer is: "+ques.correct[currQues]);
+            corrans.setText("Correct Answer is: "+ques2.correct[currQues]);
         }
 
         if (currQues+1 == totalQues) {
@@ -151,11 +151,11 @@ public class q1Activity extends AppCompatActivity implements View.OnClickListene
         correct.setVisibility(View.GONE);
         incorrect.setVisibility(View.GONE);
 
-        questions.setText(ques.questions[currQues]);
-        opt1.setText(ques.options[currQues][0]);
-        opt2.setText(ques.options[currQues][1]);
-        opt3.setText(ques.options[currQues][2]);
-        opt4.setText(ques.options[currQues][3]);
+        questions.setText(ques2.questions[currQues]);
+        opt1.setText(ques2.options[currQues][0]);
+        opt2.setText(ques2.options[currQues][1]);
+        opt3.setText(ques2.options[currQues][2]);
+        opt4.setText(ques2.options[currQues][3]);
 
     }
 

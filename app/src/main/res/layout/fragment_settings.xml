@@ -8,7 +8,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Settings"
+        android:text="Other Options"
         android:layout_centerHorizontal="true"
         android:layout_margin="20dp"
         android:textSize="30dp"
@@ -18,19 +18,8 @@
     <Button
         android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:id="@+id/profile"
-        android:layout_below="@id/settings"
-        android:layout_centerHorizontal="true"
-        android:text="View Profile"
-        android:padding="20dp"
-        android:textStyle="bold"
-        />
-
-    <Button
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
         android:id="@+id/addquiz"
-        android:layout_below="@id/profile"
+        android:layout_below="@id/settings"
         android:layout_centerHorizontal="true"
         android:text="Add Quiz"
         android:padding="20dp"
@@ -46,6 +35,19 @@
         android:text="Learn Vocabulary"
         android:padding="20dp"
         android:textStyle="bold"
+        />
+
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/logout"
+        android:layout_below="@id/vocab"
+        android:layout_centerHorizontal="true"
+        android:text="Logout"
+        android:padding="10dp"
+        android:layout_marginTop="40dp"
+        android:textStyle="bold"
+        android:backgroundTint="#eb4034"
         />
 
 

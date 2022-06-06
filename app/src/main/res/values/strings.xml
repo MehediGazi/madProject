@@ -8,10 +8,10 @@
         <item>Table</item>
         <item>Chair</item>
         <item>Book</item>
-        <item>Hello</item>
-        <item>Table</item>
-        <item>Chair</item>
-        <item>Book</item>
+        <item>Bed</item>
+        <item>Intention</item>
+        <item>Accept</item>
+        <item>Beat</item>
     </string-array>
 
     <string-array name="def">
@@ -19,9 +19,9 @@
         <item>A piece of furniture with a flat top and one or more legs, providing a level surface for eating, writing, or working at.</item>
         <item>A separate seat for one person, typically with a back and four legs.</item>
         <item>A written or printed work consisting of pages glued or sewn together along one side and bound in covers.</item>
-        <item>Used as a greeting or to begin a phone conversation.</item>
-        <item>A piece of furniture with a flat top and one or more legs, providing a level surface for eating, writing, or working at.</item>
-        <item>A separate seat for one person, typically with a back and four legs.</item>
-        <item>A written or printed work consisting of pages glued or sewn together along one side and bound in covers.</item>
+        <item>A piece of furniture for sleep or rest, typically a framework with a mattress.</item>
+        <item>A thing intended; an aim or plan.</item>
+        <item>Consent to receive or undertake (something offered).</item>
+        <item>Strike (a person or an animal) repeatedly and violently so as to hurt or injure them, typically with an implement such as a club or whip.</item>
     </string-array>
 </resources>
